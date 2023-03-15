@@ -1,6 +1,4 @@
-import { JSX } from "preact";
-
-export function Company(props: JSX.HTMLAttributes<HTMLButtonElement>) {
+export function Company() {
   return (
     <div id="sec_company" class="pt-12 pb-12 mx-auto">
         <h2 class="p-4 text-3xl text-center font-bold">Company</h2>
