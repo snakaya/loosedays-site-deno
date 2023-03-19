@@ -94,9 +94,9 @@ export default function Work() {
         const elms: HTMLCollection = document.getElementById("skillCards")?.children;
         Array.from(elms).forEach((c, idx) => {
             if(c.children[0].textContent == selectedCard) {
-                c.children[1].className = c.children[1].className == "hidden" ? "" : "hidden";
+                c.children[1].className = c.children[1].classList.contains("hidden") ? c.children[1].className.replace("hidden","") : c.children[1].className += " hidden";
             } else {
-                c.children[1].className = "hidden";
+                c.children[1].className = c.children[1].classList.contains("hidden") ? c.children[1].className : c.children[1].className += " hidden";
             }
         });
     };
@@ -131,13 +131,13 @@ export default function Work() {
                     >
                         <span class="text-base align-middle hover:text-pink-600 focus:text-pink-600 dark:text-gray-700">{s.icon_data}{s.name}</span> 
                         <div id={"skill_" + s.name.toLowerCase().replace('/','_').replace(' ','_')}
-                            class="!visible hidden"
+                            class="!visible hidden mt-2"
                             data-te-collapse-item
                             data-te-collapse-show
                         >
                             <div class="flex flex-col">
                                 {s.category.map((c) => (
-                                <div class="m-1 text-xs inline-flex items-center font-bold px-3 py-1 rounded-full bg-white text-gray-700 border">
+                                <div class="m-1 text-xs inline-flex text-center font-bold px-3 py-1 rounded-full bg-gray-50 text-gray-700 border">
                                     {c}
                                 </div>
                                 ))}
