@@ -22,8 +22,8 @@ export function Footer() {
           <SiYoutube class="p-2 m-2 inline-block align-middle w-16 h-16" />
         </div>
       </div>
-      <div class="flex flex-1 flex-col mb-2 items-center">
-        <p class="text-lg font-bold mb-1 text-center">Powered by:</p>
+      <div class="flex flex-1 flex-col justify-between items-center">
+        <p class="text-lg font-bold text-center">Powered by:</p>
         <a class="" href="https://deno.com/">
         <img class="m-1" width="197" height="37" src="https://shield.deno.dev/deno/%5E1.31.1" alt="Deno" />
         </a>
@@ -35,11 +35,11 @@ export function Footer() {
           <img class="m-1" width="197" height="37" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
         </a>
       </div>
-      <div class="flex flex-1 flex-col items-center">
+      <div class="flex flex-1 flex-col justify-between items-center">
         <img class="w-20 p-1 inline dark:hidden" src="/images/loosedays_square_logo_light.png" alt="LOOSEDAYS logo"/>
         <img class="w-20 p-1 hidden dark:inline" src="/images/loosedays_square_logo_dark.png" alt="LOOSEDAYS logo"/>
-        <p class="m-2 text-gray-500 space-y-2 text-center">Copyright© 2023 LOOSEDAYS Co.,Ltd.</p>
-        <p class="mx-auto mb-0 text-sm text-gray-500 space-y-2 text-center">All trademarks in this material are properties of their respective owners. </p>
+        <p class="text-gray-500 space-y-2 text-center">Copyright© 2023 LOOSEDAYS Co.,Ltd.</p>
+        <p class="mx-auto text-sm text-gray-500 text-center">All trademarks in this material are properties of their respective owners. </p>
       </div>
     </footer>
   );
