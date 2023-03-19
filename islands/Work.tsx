@@ -110,7 +110,7 @@ export default function Work() {
             <div
                 id="skillCards" class="flex flex-wrap items-start justify-center p-5 py-10"
                 onClick={(e) => {
-                    doToggle();
+                    setClickedTime(Date.now());
                     e.preventDefault();
                 }}
             >
