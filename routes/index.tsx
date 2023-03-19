@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { Header } from "../components/Header.tsx";
-import { Work } from "../components/Work.tsx";
+import Work from "../islands/Work.tsx";
 import { Company } from "../components/Company.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
