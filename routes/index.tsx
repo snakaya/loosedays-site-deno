@@ -42,8 +42,20 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LOOSEDAYS CO.,LTD.</title>
-        <link rel="shortcut icon" href="/images/favicon.ico"></link>
+      <title>LOOSEDAYS CO.,LTD.</title>
+      <meta name="description" content="be smart loose, make your easy days."></meta>
+      <meta itemprop="name" content="LOOSEDAYS CO.,LTD."></meta>
+      <meta itemprop="description" content="be smart loose, make your easy days | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
+      <meta itemprop="image" content="https://loosedays.jp/images/loosedays_logo_light.png"></meta>
+      <meta property="og:url" content="https://loosedays.jp/"></meta>
+      <meta property="og:type" content="website"></meta>
+      <meta property="og:title" content="LOOSEDAYS CO.,LTD. Official"></meta>
+      <meta property="og:description" content="be smart loose, make your easy days. | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
+      <meta property="og:image" content="https://loosedays.jp/images/loosedays_logo_light.png"></meta>
+      <meta name="twitter:card" content="summary_large_image"></meta>
+      <meta name="twitter:title" content="LOOSEDAYS CO.,LTD."></meta>
+      <meta name="twitter:description" content="be smart loose, make your easy days. | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
+      <meta name="twitter:image" content="https://loosedays.jp/images/loosedays_logo_light.png"></meta>
       </Head>
       <div class="divide-y divide-gray-300 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">
         <Header></Header>
