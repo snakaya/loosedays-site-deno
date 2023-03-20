@@ -52,7 +52,7 @@ export default function Home() {
       <meta property="og:title" content="LOOSEDAYS CO.,LTD. Official"></meta>
       <meta property="og:description" content="be smart loose, make your easy days. | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
       <meta property="og:image" content="https://loosedays.jp/images/loosedays_square_card_light.png"></meta>
-      <meta name="twitter:card" content="summary_large_image"></meta>
+      <meta name="twitter:card" content="summary"></meta>
       <meta name="twitter:title" content="LOOSEDAYS CO.,LTD."></meta>
       <meta name="twitter:description" content="be smart loose, make your easy days. | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
       <meta name="twitter:image" content="https://loosedays.jp/images/loosedays_square_card_light.png"></meta>
