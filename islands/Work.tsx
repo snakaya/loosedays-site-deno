@@ -78,27 +78,29 @@ export default function Work() {
     ];
     const [selectedCard, setSelectedCard] = useState("");
     const [clickedTime, setClickedTime] = useState(0);
-    /*
-    const doToggle = (target: HTMLAnchorElement) => {
-        const elms = target.parentElement?.children;
-        target.children[1].className = target.children[1].className == "hidden" ? "" : "hidden";
-        Array.from(elms).forEach((c, idx) => {
-            if(target.children[0].textContent != c.children[0].textContent) {
-                c.children[1].className = "hidden";
-            }
-        });
-    };
-    */
     const doToggle = () => {
         console.log(selectedCard);
         const elms: HTMLCollection = document.getElementById("skillCards")?.children;
+        let closeCnt = 0;
         Array.from(elms).forEach((c, idx) => {
             if(c.children[0].textContent == selectedCard) {
-                c.children[1].className = c.children[1].classList.contains("hidden") ? c.children[1].className.replace("hidden","") : c.children[1].className += " hidden";
+                if(c.children[1].classList.contains("hidden")) {
+                    c.children[1].className = c.children[1].className.replace("hidden","");
+                } else {
+                    c.children[1].className = c.children[1].className += " hidden";
+                    closeCnt++;
+                }
             } else {
-                c.children[1].className = c.children[1].classList.contains("hidden") ? c.children[1].className : c.children[1].className += " hidden";
+                if(!c.children[1].classList.contains("hidden")) {
+                    c.children[1].className = c.children[1].className += " hidden";
+                }
+                closeCnt++;
             }
         });
+        console.debug(closeCnt);
+        if(Array.from(elms).length == closeCnt) {
+            setSelectedCard("");
+        }
     };
     useEffect(() => {
         doToggle();
