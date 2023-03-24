@@ -11,7 +11,7 @@ export function Header() {
           <li class="flex-auto no-underline hover:underline"><a href="#sec_company">COMPANY</a></li>
           <li class="flex-auto no-underline hover:underline"><a href="#sec_contact">CONTACT</a></li>
         </ul>
-        <h2 class="bg-cover bg-no-repeat bg-center" style="background: url(../images/mainImg.png)">
+        <h2 class="bg-cover bg-no-repeat bg-center" style="background: url(/images/mainImg.jpg)">
           <p class="py-40 text-5xl text-center text-gray-100">
             be smart <span class="" style="text-decoration-line: underline; text-underline-offset: 8px; text-decoration-style: dashed;">loose</span>, make your easy <span class="" style="text-decoration-line: underline; text-underline-offset: 8px; text-decoration-style: dashed;">days</span>.
           </p>
