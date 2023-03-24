@@ -1,5 +1,4 @@
-import { JSX } from "preact";
-import { useState, useEffect } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { SkillCard, Skills } from "../components/SkillCard.tsx";
 import {
     SiOpenid,
@@ -72,13 +71,9 @@ const skills: Skills[] = [
 ];
 
 export default function Work() {
-    
     const [selectedCard, setSelectedCard] = useState("");
     const [selectedCardState, setSelectedCardState] = useState(false);
     const [clickedTime, setClickedTime] = useState(0);
-
-    //useEffect(() => {
-    //},[selectedCard, selectedCardState, clickedTime]);
     
     return (
         <div id="sec_work" class="pt-12 pb-12 mx-auto">
@@ -87,6 +82,8 @@ export default function Work() {
             <div
                 id="skillCards" class="flex flex-wrap items-start justify-center p-5 py-10"
                 onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     setSelectedCardState(false);
                     setClickedTime(Date.now());
                 }}

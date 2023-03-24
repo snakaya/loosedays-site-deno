@@ -116,6 +116,7 @@
     "https://esm.sh/preact@10.11.0": "e888b244446037c56f1881173fb51d1f5fa7aae5599e6c5154619346a6a5094e",
     "https://esm.sh/preact@10.11.0/hooks": "2b8ec155eb8b87501663f074acff1d55a9114fa7d88f0b39da06c940af1ff736",
     "https://esm.sh/preact@10.11.0/jsx-runtime": "5c123264f19799ab243211132dded45f6d42d594b5c78dd585f947d07bf20eae",
+    "https://esm.sh/prismjs@1.29.0/components/prism-bash.min?no-check": "2348f5dc621a50742451ad33047d9fdab1b70083ec03e403e217a08e788057d5",
     "https://esm.sh/stable/preact@10.11.0/deno/hooks.js": "32a891b0e7abdfbf30dc7c274dbcbd46f2ea04d6637174451c50c41c12429805",
     "https://esm.sh/stable/preact@10.11.0/deno/jsx-runtime.js": "0310ceb4c83643ee994baa3104675f08834300731a838ddecf5078853492e8d3",
     "https://esm.sh/stable/preact@10.11.0/deno/preact.js": "08219fcb5b92ccdc709233a070ab22478c91521866c819aea679144847e4e87a",
@@ -137,6 +138,7 @@
     "https://esm.sh/v111/preact@10.11.0/jsx-runtime/src/index.d.ts": "e153460ed2b3fe2ad8b93696ecd48fbf73cd628b0b0ea6692b71804a3af69dfd",
     "https://esm.sh/v111/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
     "https://esm.sh/v111/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2",
+    "https://esm.sh/v111/prismjs@1.29.0/deno/components/prism-bash.min.js": "5e73237e5f451b7f1c392f3ec953f1e494fe6beccdc3832e7fe8d2a46d30471c",
     "https://esm.sh/v111/style-vendorizer@2.2.3/deno/style-vendorizer.js": "4823723c1cd5b34a60b4a1dfdf272a821d367fc472c23aeed6c3bcd7af5b7a7b",
     "https://esm.sh/v111/twind@0.16.17/deno/sheets.js": "c504a460f5df2954f7334a821ef3ac9bedfc94dcc3f0dbf60af8d22f000391db",
     "https://esm.sh/v111/twind@0.16.17/deno/twind.js": "076dfc344b9507b3f5ee8a20d0b1e6eeb2ea3c6688649026ed0e13e4de158ff2",
@@ -148,5 +150,41 @@
     "https://esm.sh/v111/twind@0.16.19/deno/twind.js": "a1302d980b2239e2f37d6ba5c826ebb4a09bf20507f1975b03dbff611013f3a5",
     "https://esm.sh/v111/twind@0.16.19/sheets/sheets.d.ts": "7e24f8c8fa17200d73e08dc2c8221646897cfe0947ef2ed3b04225c63cc2b136",
     "https://esm.sh/v111/twind@0.16.19/twind.d.ts": "35492f009a6d8695748d121d0b3b210b0819a663eafc77d68296d3110d6ec27f"
+  },
+  "npm": {
+    "specifiers": {
+      "preact-prism@0.1.2": "preact-prism@0.1.2_preact@8.5.3",
+      "prismjs": "prismjs@1.29.0",
+      "prismjs@1.29.0": "prismjs@1.29.0"
+    },
+    "packages": {
+      "preact-html@2.0.3_preact@8.5.3": {
+        "integrity": "sha512-Kkcle3m7SApPHUqE13vF6we6ViOM1feIIetUdVwP+GA7NMN7caRgLjs4Sx9GzSXkylWNAzCRn8B7IQDX9M3YXg==",
+        "dependencies": {
+          "preact": "preact@8.5.3",
+          "xmldom": "xmldom@0.1.22"
+        }
+      },
+      "preact-prism@0.1.2_preact@8.5.3": {
+        "integrity": "sha512-honRfUlTvdtyN2yRIDv8SJRjWKm62H9y94EEvT1ILGjwRdY2AfQH0QUc967roEd9GRtSEAHVwwzYH5O1wh139w==",
+        "dependencies": {
+          "preact": "preact@8.5.3",
+          "preact-html": "preact-html@2.0.3_preact@8.5.3",
+          "prismjs": "prismjs@1.29.0"
+        }
+      },
+      "preact@8.5.3": {
+        "integrity": "sha512-O3kKP+1YdgqHOFsZF2a9JVdtqD+RPzCQc3rP+Ualf7V6rmRDchZ9MJbiGTT7LuyqFKZqlHSOyO/oMFmI2lVTsw==",
+        "dependencies": {}
+      },
+      "prismjs@1.29.0": {
+        "integrity": "sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==",
+        "dependencies": {}
+      },
+      "xmldom@0.1.22": {
+        "integrity": "sha512-/9PWF/8TkkmZZmUtRYRw3wq1cT0ubaff/elSmdy+wYMrbyGH5CdSyr6XwDpH6HTkSIljXenjfVkBij46eescFQ==",
+        "dependencies": {}
+      }
+    }
   }
 }

@@ -28,6 +28,7 @@ export function SkillCard(props: Props) {
             aria-expanded="false"
             aria-controls={"skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
             onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 props.setSelectedCard(props.skill.name);
                 props.setSelectedCardState(e.currentTarget.children[1].classList.contains("hidden"));

@@ -1,5 +1,11 @@
 {
   "deno.enable": true,
   "deno.lint": true,
-  "editor.defaultFormatter": "denoland.vscode-deno"
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "deno.suggest.imports.hosts": {
+    "https://deno.land": true,
+    "https://x.nest.land": true,
+    "https://crux.land": true,
+    "https://stx.deno.dev": false
+  }
 }
