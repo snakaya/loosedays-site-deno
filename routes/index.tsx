@@ -56,6 +56,7 @@ export default function Home() {
       <meta name="twitter:title" content="LOOSEDAYS CO.,LTD."></meta>
       <meta name="twitter:description" content="be smart loose, make your easy days. | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
       <meta name="twitter:image" content="https://loosedays.jp/images/loosedays_square_card_light.png"></meta>
+      <link rel="shortcut icon" href="/images/favicon.ico"></link>
       </Head>
       <div class="divide-y divide-gray-300 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">
         <Header></Header>
