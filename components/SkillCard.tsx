@@ -20,7 +20,7 @@ interface Props {
 export function SkillCard(props: Props) {
     return (
         <a
-            class="relative px-3 py-1 m-2 rounded-md shadow-sm sm:py-2 sm:text-base ring ring-transparent group md:px-4 hover:rounded-lg hover:ring hover:ring-opacity-50 focus:ring-opacity-50 hover:ring-pink-600 focus:ring-pink-600 focus:bg-pink-200 hover:bg-pink-200 text-gray-900 bg-gray-200 dark:bg-gray-400 dark:text-gray-200 transition duration-150 ease-in-out"
+            class="relative px-2 py-1 m-2 align-middle rounded-md shadow-sm sm:py-2 sm:text-base ring ring-transparent group md:px-4 hover:rounded-lg hover:ring hover:ring-opacity-50 focus:ring-opacity-50 hover:ring-pink-600 focus:ring-pink-600 focus:bg-pink-200 hover:bg-pink-200 text-gray-900 bg-gray-200 dark:bg-gray-400 dark:text-gray-200 transition duration-150 ease-in-out"
             href={"#skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
             data-te-collapse-init
             data-te-collapse-collapsed
