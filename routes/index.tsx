@@ -5,6 +5,7 @@ import { Company } from "../components/Company.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Handlers } from "$fresh/server.ts";
+import { Product } from "../components/Product.tsx";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -44,9 +45,9 @@ export default function Home() {
       <Head>
       <title>LOOSEDAYS CO.,LTD.</title>
       <meta name="description" content="be smart loose, make your easy days."></meta>
-      <meta itemprop="name" content="LOOSEDAYS CO.,LTD."></meta>
-      <meta itemprop="description" content="be smart loose, make your easy days | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
-      <meta itemprop="image" content="https://loosedays.jp/images/loosedays_square_card_light.png"></meta>
+      <meta itemProp="name" content="LOOSEDAYS CO.,LTD."></meta>
+      <meta itemProp="description" content="be smart loose, make your easy days | IT Consulting, IT Architect, Technical Support of IT Development"></meta>
+      <meta itemProp="image" content="https://loosedays.jp/images/loosedays_square_card_light.png"></meta>
       <meta property="og:url" content="https://loosedays.jp/"></meta>
       <meta property="og:type" content="website"></meta>
       <meta property="og:title" content="LOOSEDAYS CO.,LTD. Official"></meta>

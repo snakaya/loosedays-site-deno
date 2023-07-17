@@ -7,5 +7,6 @@
     "https://x.nest.land": true,
     "https://crux.land": true,
     "https://stx.deno.dev": false
-  }
+  },
+  "svg.preview.background": "custom"
 }
