@@ -99,7 +99,7 @@ export default function Work() {
             <p class="m-4 text-2xl text-center font-medium">Keywords:</p>
             <div
                 // id="skillCards" class="flex flex-wrap items-start justify-center mx-1 py-1"
-                id="skillCards" class="grid gap-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6"
+                id="skillCards" class="grid gap-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6"
                 onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
