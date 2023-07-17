@@ -5,7 +5,7 @@ import { Company } from "../components/Company.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Handlers } from "$fresh/server.ts";
-import { Product } from "../components/Product.tsx";
+
 
 export const handler: Handlers = {
   async GET(req, ctx) {
