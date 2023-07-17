@@ -79,7 +79,7 @@ export default function Work() {
         <div id="sec_work" class="pt-12 pb-12 mx-auto">
             <h2 class="p-4 text-3xl text-center font-bold">Work</h2>
             <p class="pt-2 pb-8 text-2xl text-center font-medium">We and You can work together with...</p>
-            <div class="mx-4 grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+            <div class="mx-4 grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-2">
                 <button class="flex flex-col text-center rounded-lg border p-4 md:p-6">
                     <h3 class="m-2 text-3xl font-semibold md:text-5xl">Technical Consulting</h3>
                     <p class="mb-4 text-gray-500">We complement your project by providing our technical skills.</p>
