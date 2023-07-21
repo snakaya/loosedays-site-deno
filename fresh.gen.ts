@@ -3,14 +3,16 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/index.tsx";
-import * as $$0 from "./islands/Work.tsx";
+import * as $$0 from "./islands/AddToSlack.tsx";
+import * as $$1 from "./islands/Work.tsx";
 
 const manifest = {
   routes: {
     "./routes/index.tsx": $0,
   },
   islands: {
-    "./islands/Work.tsx": $$0,
+    "./islands/AddToSlack.tsx": $$0,
+    "./islands/Work.tsx": $$1,
   },
   baseUrl: import.meta.url,
 };
