@@ -28,7 +28,7 @@ export function Footer() {
           </div>
           <p class="text-lg font-bold mb-1 text-center">Member:</p>
           <div class="flex justify-center">
-            <a href="https://openid.net/foundation/" target="_blank" class="p-2 m-2 inline-block hover:bg-black">
+            <a href="https://openid.net/foundation/sponsoring-members/" target="_blank" class="p-2 m-2 inline-block hover:bg-black">
               <img class="m-1 hidden dark:block" src="/images/openid_logo_dark.svg" />
               <img class="m-1 dark:hidden" src="/images/openid_logo_light.svg" />
             </a>
