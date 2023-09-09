@@ -7,6 +7,7 @@ export function Header() {
         </h1>
         <ul class="mx-auto max-w-screen-md py-10 flex flex-row justify-center text-center">
           <li class="flex-auto no-underline hover:underline"><a href="#top">TOP</a></li>
+          <li class="flex-auto no-underline hover:underline"><a href="#sec_product">PRODUCT</a></li>
           <li class="flex-auto no-underline hover:underline"><a href="#sec_work">WORK</a></li>
           <li class="flex-auto no-underline hover:underline"><a href="#sec_company">COMPANY</a></li>
           <li class="flex-auto no-underline hover:underline"><a href="#sec_contact">CONTACT</a></li>

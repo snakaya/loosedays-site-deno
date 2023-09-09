@@ -1,6 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { Header } from "../components/Header.tsx";
 import Work from "../islands/Work.tsx";
+import { Product } from "../components/Product.tsx";
 import { Company } from "../components/Company.tsx";
 import { Contact } from "../components/Contact.tsx";
 import { Footer } from "../components/Footer.tsx";
@@ -61,6 +62,7 @@ export default function Home() {
       </Head>
       <div class="divide-y divide-gray-300 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">
         <Header></Header>
+        <Product></Product>
         <Work></Work>
         <Company></Company>
         <Contact></Contact>
