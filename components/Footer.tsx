@@ -37,7 +37,7 @@ export function Footer() {
         <div class="flex flex-col align-top justify-between items-center">
           <p class="text-lg font-bold text-center">Powered by:</p>
           <a class="" href="https://deno.com/">
-          <img class="m-1" width="197" height="37" src="https://shield.deno.dev/deno/%5E1.34.3" alt="Deno" />
+          <img class="m-1" width="197" height="37" src="https://shield.deno.dev/deno/%5E1.40.4" alt="Deno" />
           </a>
           <a href="https://fresh.deno.dev">
             <img class="m-1 dark:hidden" width="197" height="37" src="https://fresh.deno.dev/fresh-badge.svg" alt="Made with Fresh" />
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div class="my-10">
-        <p class="text-gray-500 space-y-2 text-center">Copyright© 2023 LOOSEDAYS Co.,Ltd.</p>
+        <p class="text-gray-500 space-y-2 text-center">Copyright© 2024 LOOSEDAYS Co.,Ltd.</p>
         <p class="mx-auto text-sm text-gray-500 text-center">All trademarks in this material are properties of their respective owners. </p>
       </div>
     </footer>
