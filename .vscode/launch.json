@@ -10,7 +10,7 @@
             "type": "node",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "/opt/homebrew/bin/deno",
-            "runtimeArgs": ["run", "--inspect-brk", "-A", "dev.ts"],
+            "runtimeArgs": ["run", "--inspect-brk", "-A", "app/dev.ts"],
             "attachSimplePort": 8787
         }
     ]

@@ -1,0 +1,21 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.6.5/",
+    "preact": "https://esm.sh/preact@10.19.4",
+    "preact/": "https://esm.sh/preact@10.19.4/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.3.1",
+    "twind": "https://esm.sh/twind@1.1.3",
+    "twind/": "https://esm.sh/twind@1.1.3/",
+    "react-icons/si": "https://cdn.jsdelivr.net/gh/urielch/react-icons-si@1.0.9/mod.ts",
+    "react-icons/tb": "https://cdn.jsdelivr.net/gh/urielch/react-icons-tb@1.0.9/mod.ts",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3"
+  }
+}

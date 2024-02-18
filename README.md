@@ -24,4 +24,4 @@ or use GitHub Actions workfllow.
 
 This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/snakaya/loosedays-site-deno/blob/main/LICENSE) file for details.
 
-Copyright(c) 2020 LOOSEDAYS Co.,Ltd. All Rights Reserved.
+Copyright(c) 2020-2024 LOOSEDAYS Co.,Ltd. All Rights Reserved.
