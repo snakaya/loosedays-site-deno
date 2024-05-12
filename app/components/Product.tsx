@@ -4,9 +4,8 @@ export function Product() {
   return (
     <div id="sec_product" class="pt-12 pb-12 mx-auto">
         <h2 class="p-4 text-3xl text-center font-bold">Product</h2>
-        <div class="mx-2 overflow-hidden border rounded-lg shadow-2xl md:grid md:grid-cols-3">
-            <img src="https://aisebas.com/images/color_logo.png" class="line-block mx-auto w-[30%] md:h-full md:w-full object-cover"/>
-            <div class="p-4 text-center sm:p-6 md:col-span-2 lg:p-8">
+        <div class="place-self-auto bg-auto bg-no-repeat bg-center bg-[#32afb5] bg-[url('/images/ai-sebas_logo.png')] mx-2 overflow-hidden border rounded-lg shadow-2xl">
+            <div class="p-4 backdrop-filter backdrop-brightness-[1.2] backdrop-blur-[2px] dark:backdrop-brightness-[0.3] text-center sm:p-6 lg:p-8">
                 <p class="text-4xl font-semibold tracking-widest">
                 AIセバス
                 </p>
@@ -23,7 +22,7 @@ export function Product() {
                 <AddToSlack />
                 </div>
 
-                <p class="mt-8 text-xl font-medium text-gray-400">
+                <p class="mt-8 text-xl font-medium dark:text-gray-400">
                     <a href="https://www.aisebas.com/" target="_blank" class="hover:underline">https://www.aisebas.com/</a>
                 </p>
             </div>
