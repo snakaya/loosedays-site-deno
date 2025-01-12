@@ -37,7 +37,7 @@ export function Footer() {
         <div class="flex flex-col align-top justify-between items-center">
           <p class="text-lg font-bold text-center">Powered by:</p>
           <a class="" href="https://deno.com/">
-          <img class="m-1" width="197" height="37" src="https://shield.deno.dev/deno/%5E1.42.4" alt="Deno" />
+          <img class="m-1" width="197" height="37" src="https://shield.deno.dev/deno/%5E2.1.14" alt="Deno" />
           </a>
           <a href="https://fresh.deno.dev">
             <img class="m-1 dark:hidden" width="197" height="37" src="https://fresh.deno.dev/fresh-badge.svg" alt="Made with Fresh" />
