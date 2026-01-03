@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div class="my-10">
-        <p class="text-gray-500 space-y-2 text-center">Copyright© 2023-2025 LOOSEDAYS Co.,Ltd.</p>
+        <p class="text-gray-500 space-y-2 text-center">Copyright© 2023-2026 LOOSEDAYS Co.,Ltd.</p>
         <p class="mx-auto text-sm text-gray-500 text-center">All trademarks in this material are properties of their respective owners. </p>
       </div>
     </footer>

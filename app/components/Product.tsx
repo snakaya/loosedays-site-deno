@@ -19,7 +19,6 @@ export function Product() {
                             </p>
 
                             <p class="text-xl text-gray-800">Start from Free Plan!</p>
-                            <p class="text-lg text-gray-700 italic">2025年5月頃公開予定</p>
                         </div>
 
                         <div class="mt-6 md:mt-8">
