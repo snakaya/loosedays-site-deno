@@ -32,6 +32,49 @@ export function Product() {
                 </div>
             </div>
         </div>
+
+        {/* GenAI OIDC IdP */}
+        <div class="w-full mx-auto mt-10 bg-gradient-to-r from-[#1a1a2e] to-[#16213e] rounded-lg shadow-2xl overflow-hidden">
+            <div class="relative p-6 md:p-8 lg:p-10 text-center">
+                <div class="flex flex-col items-center justify-center space-y-6">
+                    <div class="flex items-center justify-center space-x-4">
+                        <span class="text-5xl">🤖</span>
+                        <img src="/images/openid_logo_dark.svg" alt="OpenID" class="h-12" />
+                    </div>
+                    <h3 class="text-3xl font-black sm:text-4xl lg:text-5xl text-white">
+                        GenAI OIDC Identity Provider
+                    </h3>
+
+                    <div class="mt-4 space-y-3">
+                        <p class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide text-gray-200">
+                            LLM-Powered OIDC Identity Provider
+                        </p>
+
+                        <p class="text-lg text-gray-300 max-w-3xl">
+                            A proof-of-concept OIDC Identity Provider that delegates authentication logic, validation, and login UI generation to OpenAI LLM in real-time.
+                        </p>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">OpenAI</span>
+                        <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Deno</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm rounded-full">OIDC</span>
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">PKCE</span>
+                    </div>
+
+                    <p class="mt-6 text-xl font-medium">
+                        <a href="https://github.com/snakaya/GenAI-OIDC-IdP" target="_blank" class="text-blue-400 underline hover:text-blue-300">
+                            GitHub Repository
+                        </a>
+                        {" | "}
+                        <a href="https://genai-oidc.deno.dev" target="_blank" class="text-blue-400 underline hover:text-blue-300">
+                            Live Demo
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <p class="mt-10 mb-5 text-xl md:text-2xl text-center font-medium">and more, coming soon.</p>
     </div>
   );
