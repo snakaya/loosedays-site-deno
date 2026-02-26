@@ -5,6 +5,7 @@ import presetTailwind from "https://esm.sh/@twind/preset-tailwind@1.1.4";
 export default {
   ...defineConfig({
     presets: [presetTailwind() as Preset],
+    darkMode: "class",
   }),
   plugin: [
     '@tailwindcss/typography',

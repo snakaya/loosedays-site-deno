@@ -14,19 +14,18 @@ interface Props {
     setSelectedCardState: (h: boolean) => void | Promise<void>;
     clickedTime: number;
     setClickedTime: (n: number) => void | Promise<void>;
-
 }
 
 export function SkillCard(props: Props) {
+    const isOpen = props.selectedCard === props.skill.name && props.selectedCardState;
     return (
         <a
-            class="relative px-2 py-1 m-2 align-middle rounded-md shadow-sm sm:py-2 sm:text-base ring ring-transparent group md:px-4 hover:rounded-lg hover:ring hover:ring-opacity-50 focus:ring-opacity-50 hover:ring-pink-600 focus:ring-pink-600 focus:bg-pink-200 hover:bg-pink-200 text-gray-900 bg-gray-200 dark:bg-gray-400 dark:text-gray-200 transition duration-150 ease-in-out"
+            class={`relative px-3 py-2 m-1.5 align-middle rounded-lg shadow-sm text-sm sm:text-base ring-1 transition duration-200 ease-in-out cursor-pointer ${
+                isOpen
+                    ? "ring-blue-500 bg-blue-50 dark:bg-gray-500"
+                    : "ring-gray-200 dark:ring-gray-500 bg-gray-100 dark:bg-gray-400 hover:ring-blue-400 hover:shadow-md"
+            } text-gray-800 dark:text-gray-200`}
             href={"#skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
-            data-te-collapse-init
-            data-te-collapse-collapsed
-            data-te-target={"#skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
-            aria-expanded="false"
-            aria-controls={"skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
             onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -35,15 +34,13 @@ export function SkillCard(props: Props) {
                 props.setClickedTime(Date.now());
             }}
         >
-            <span class="text-base align-middle hover:text-pink-600 focus:text-pink-600 dark:text-gray-700">{props.skill.icon_data}{props.skill.name}</span> 
+            <span class="text-sm font-medium align-middle dark:text-gray-700">{props.skill.icon_data}{props.skill.name}</span>
             <div id={"skill_" + props.skill.name.toLowerCase().replace('/','_').replace(' ','_')}
-                class={props.selectedCard == props.skill.name && props.selectedCardState ? "!visible mt-2" : "!visible hidden mt-2"}
-                data-te-collapse-item
-                data-te-collapse-show
+                class={isOpen ? "mt-2" : "hidden mt-2"}
             >
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
                     {props.skill.category.map((c) => (
-                    <div class="m-1 text-xs inline-flex text-center font-bold px-3 py-1 rounded-full bg-gray-50 text-gray-700 border">
+                    <div class="text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-gray-600 dark:text-gray-200 text-center">
                         {c}
                     </div>
                     ))}
@@ -51,5 +48,4 @@ export function SkillCard(props: Props) {
             </div>
         </a>
     );
-
 };

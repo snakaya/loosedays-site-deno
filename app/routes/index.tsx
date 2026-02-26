@@ -1,5 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { Header } from "../components/Header.tsx";
+import StickyNav from "../islands/StickyNav.tsx";
 import Work from "../islands/Work.tsx";
 import { Product } from "../components/Product.tsx";
 import { Company } from "../components/Company.tsx";
@@ -61,6 +62,7 @@ export default function Home() {
       <link rel="shortcut icon" href="/images/favicon.ico"></link>
       </Head>
       <div class="divide-y divide-gray-300 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+        <StickyNav />
         <Header></Header>
         <Product></Product>
         <Work></Work>

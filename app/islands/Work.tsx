@@ -34,6 +34,14 @@ import {
     TbRotateRectangle,
     TbHeartHandshake,
     TbArrowsMaximize,
+    TbBulb,
+    TbCode,
+    TbTopologyComplex,
+    TbFlask,
+    TbRobot,
+    TbBrain,
+    TbMessageChatbot,
+    TbVectorTriangle,
 } from 'react-icons/tb';
 
 const skills: Skills[] = [
@@ -65,40 +73,73 @@ const skills: Skills[] = [
     {name: "Redis", category: ["Database", "NoSQL"], icon_data: <SiRedis class="inline-block align-middle mx-1" />},
     {name: "Apache Cassandra", category: ["Database", "NoSQL"], icon_data: <SiApachecassandra class="inline-block align-middle mx-1" />},
     {name: "DynamoDB", category: ["Database", "NoSQL", "AWS"], icon_data: <SiAmazondynamodb class="inline-block align-middle mx-1" />},
+    {name: "LLM / GenAI", category: ["AI"], icon_data: <TbBrain class="inline-block align-middle mx-1" />},
+    {name: "RAG", category: ["AI"], icon_data: <TbVectorTriangle class="inline-block align-middle mx-1" />},
+    {name: "AI Agents", category: ["AI"], icon_data: <TbRobot class="inline-block align-middle mx-1" />},
+    {name: "Prompt Engineering", category: ["AI"], icon_data: <TbMessageChatbot class="inline-block align-middle mx-1" />},
     {name: "Agile Development", category: ["Agile Development", "Team Building", "Architecture"], icon_data: <TbRotateRectangle class="inline-block align-middle mx-1" />},
     {name: "Team Building", category: ["Agile Development", "Architecture"], icon_data: <TbArrowsMaximize class="inline-block align-middle mx-1" />},
+];
+
+const services = [
+    { title: "Technical Consulting", desc: "We complement your project by providing our technical skills.", icon: <TbBulb class="w-10 h-10 text-blue-500" /> },
+    { title: "Product Development", desc: "We deliver solutions to our customers through the development of our original products.", icon: <TbCode class="w-10 h-10 text-blue-500" /> },
+    { title: "Architect", desc: "All-in-one architect, front-end to back-end, network configuration to business specifications.", icon: <TbTopologyComplex class="w-10 h-10 text-blue-500" /> },
+    { title: "Technical Research", desc: "Take advantage of our extensive experience!", icon: <TbFlask class="w-10 h-10 text-blue-500" /> },
 ];
 
 export default function Work() {
     const [selectedCard, setSelectedCard] = useState("");
     const [selectedCardState, setSelectedCardState] = useState(false);
     const [clickedTime, setClickedTime] = useState(0);
-    
+    const [filter, setFilter] = useState("All");
+
+    const categories = ["All", "AI", "Identity", "Cloud", "Languages", "Database", "DevOps"];
+
+    const filteredSkills = filter === "All" ? skills : skills.filter(s => {
+        if (filter === "AI") return s.category.some(c => c === "AI");
+        if (filter === "Identity") return s.category.some(c => c === "Identity" || c === "Security");
+        if (filter === "Cloud") return s.category.some(c => c === "Cloud Computing" || c === "Network" || c === "Infrastructure");
+        if (filter === "Languages") return s.category.some(c => c === "Programing" || c === "Web Framework");
+        if (filter === "Database") return s.category.some(c => c === "Database");
+        if (filter === "DevOps") return s.category.some(c => c === "Development" || c === "Deployment" || c === "Agile Development" || c === "Architecture");
+        return true;
+    });
+
     return (
-        <div id="sec_work" class="pt-12 pb-12 mx-auto">
-            <h2 class="p-4 text-3xl text-center font-bold">Work</h2>
-            <p class="pt-2 pb-8 text-2xl text-center font-medium">We and You can work together with...</p>
-            <div class="mx-4 grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-2">
-                <button class="flex flex-col text-center rounded-lg border p-4 md:p-6">
-                    <h3 class="line-block mx-auto my-2 text-center text-3xl font-semibold md:text-5xl">Technical Consulting</h3>
-                    <p class="mb-4 text-gray-500">We complement your project by providing our technical skills.</p>
-                </button>
-                <button class="flex flex-col text-center rounded-lg border p-4 md:p-6">
-                    <h3 class="line-block mx-auto my-2 text-center text-3xl font-semibold md:text-5xl">Product Development</h3>
-                    <p class="mb-4 text-gray-500">We deliver solutions to our customers through the development of our original products.</p>
-                </button>
-                <button class="flex flex-col text-center rounded-lg border p-4 md:p-6">
-                    <h3 class="line-block mx-auto my-2 text-center text-3xl font-semibold md:text-5xl">Architect</h3>
-                    <p class="mb-4 text-gray-500">All-in-one architect, front-end to back-end, network configuration to business specifications.</p>
-                </button>
-                <button class="flex flex-col text-center rounded-lg border p-4 md:p-6">
-                    <h3 class="line-block mx-auto my-2 text-center text-3xl font-semibold md:text-5xl">Technical Research</h3>
-                    <p class="mb-4 text-gray-500">Take advantage of our extensive experience!</p>
-                </button>
+        <div id="sec_work" class="pt-16 pb-16 mx-auto container px-4">
+            <h2 class="text-3xl text-center font-bold mb-2">Work</h2>
+            <p class="text-center text-gray-500 dark:text-gray-400 mb-10">We and you can work together with...</p>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {services.map(s => (
+                    <div class="flex flex-col items-center text-center rounded-xl border border-gray-200 dark:border-gray-600 p-6 transition duration-200 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-500">
+                        <div class="mb-4">{s.icon}</div>
+                        <h3 class="text-xl font-bold mb-2">{s.title}</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">{s.desc}</p>
+                    </div>
+                ))}
             </div>
-            <p class="m-4 text-2xl text-center font-medium">Keywords:</p>
+
+            <p class="mt-12 mb-4 text-2xl text-center font-medium">Keywords</p>
+
+            {/* Category filter */}
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                {categories.map(cat => (
+                    <button
+                        class={`px-4 py-1.5 rounded-full text-sm font-medium transition duration-200 ${
+                            filter === cat
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-200 text-gray-600 dark:bg-gray-500 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-400"
+                        }`}
+                        onClick={() => setFilter(cat)}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
+
             <div
-                // id="skillCards" class="flex flex-wrap items-start justify-center mx-1 py-1"
                 id="skillCards" class="grid gap-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6"
                 onClick={(e) => {
                     e.preventDefault();
@@ -107,7 +148,7 @@ export default function Work() {
                     setClickedTime(Date.now());
                 }}
             >
-                {skills.map((s, idx) => (
+                {filteredSkills.map((s) => (
                     <SkillCard
                         skill={s}
                         selectedCard={selectedCard}

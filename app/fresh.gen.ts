@@ -5,6 +5,9 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $AddToSlack from "./islands/AddToSlack.tsx";
+import * as $DarkModeToggle from "./islands/DarkModeToggle.tsx";
+import * as $HeroNav from "./islands/HeroNav.tsx";
+import * as $StickyNav from "./islands/StickyNav.tsx";
 import * as $Work from "./islands/Work.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -15,6 +18,9 @@ const manifest = {
   },
   islands: {
     "./islands/AddToSlack.tsx": $AddToSlack,
+    "./islands/DarkModeToggle.tsx": $DarkModeToggle,
+    "./islands/HeroNav.tsx": $HeroNav,
+    "./islands/StickyNav.tsx": $StickyNav,
     "./islands/Work.tsx": $Work,
   },
   baseUrl: import.meta.url,
