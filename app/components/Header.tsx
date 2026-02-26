@@ -24,13 +24,15 @@ export function Header() {
             <div style="position: absolute; top: 0; left: 70%; width: 2px; height: 140%; background: white; transform: rotate(25deg); transform-origin: top left;"></div>
           </div>
 
-          {/* Logo */}
-          <div class="relative pt-12 pb-4 flex justify-center">
-            <img class="max-w-screen-md w-8/12 md:w-4/12 drop-shadow-lg" src="/images/loosedays_logo_dark.png" alt="LOOSEDAYS logo"/>
+          {/* Navigation */}
+          <div class="relative pt-4">
+            <HeroNav />
           </div>
 
-          {/* Navigation */}
-          <HeroNav />
+          {/* Logo */}
+          <div class="relative pt-6 pb-4 flex justify-center">
+            <img class="max-w-screen-md w-8/12 md:w-4/12 drop-shadow-lg" src="/images/loosedays_logo_dark.png" alt="LOOSEDAYS logo"/>
+          </div>
 
           {/* Tagline */}
           <div class="relative py-20 md:py-28 text-center px-4">
