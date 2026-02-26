@@ -4,7 +4,40 @@ export function Product() {
   return (
     <div id="sec_product" class="pt-12 pb-12 mx-auto container px-4">
         <h2 class="p-4 text-3xl text-center font-bold mb-6">Product</h2>
-        <div class="w-full mx-auto bg-gradient-to-r from-[#ff8888] to-[#8888ff] rounded-lg shadow-2xl overflow-hidden">
+
+        {/* LocalRAG */}
+        <div class="w-full mx-auto bg-gradient-to-r from-[#0050dc] to-[#0080ff] rounded-lg shadow-2xl overflow-hidden">
+            <div class="relative p-6 md:p-8 lg:p-10 text-center">
+                <div class="flex flex-col items-center justify-center space-y-6">
+                    <img src="/images/localrag_logo.png" alt="LocalRAG" class="h-16 sm:h-20 lg:h-24" />
+
+                    <div class="mt-4 space-y-3">
+                        <p class="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide text-white">
+                            Chat with Your Documents Privately
+                        </p>
+
+                        <p class="text-xl text-blue-100">Everything stays on your device.</p>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-yellow-400 text-blue-900 text-sm font-bold rounded-full">Free</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">iOS</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">Android</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">Claude AI</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">PDF</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">EPUB</span>
+                        <span class="px-3 py-1 bg-white/20 text-white text-sm rounded-full">DOCX</span>
+                    </div>
+
+                    <p class="mt-6 text-xl font-medium">
+                        <a href="https://localrag.app" target="_blank" class="text-yellow-300 underline hover:text-yellow-100">https://localrag.app</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {/* GACHI.ai */}
+        <div class="w-full mx-auto mt-10 bg-gradient-to-r from-[#ff8888] to-[#8888ff] rounded-lg shadow-2xl overflow-hidden">
             <div class="relative">
                 <div class="absolute inset-0 bg-no-repeat bg-center opacity-70 bg-[url('https://cdn.gachi.ai/static/gachiai_logo2_gray.png')]"></div>
                 <div class="relative p-6 md:p-8 lg:p-10 text-center">
