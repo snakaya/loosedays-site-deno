@@ -9,7 +9,7 @@ export default function App({ Component }: PageProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <title>app</title>
+        <title>LOOSEDAYS Co.,Ltd.</title>
         <style>{`
           body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
           html { scroll-behavior: smooth; }
