@@ -9,8 +9,8 @@
             "name": "deno-fresh",
             "type": "node",
             "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "/opt/homebrew/bin/deno",
-            "runtimeArgs": ["run", "--inspect-brk", "-A", "app/dev.ts"],
+            "runtimeExecutable": "deno",
+            "runtimeArgs": ["task", "dev"],
             "attachSimplePort": 8787
         }
     ]

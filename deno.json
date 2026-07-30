@@ -1,30 +1,57 @@
 {
+  "nodeModulesDir": "manual",
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ app/dev.ts",
-    "build": "deno run -A app/dev.ts build",
-    "preview": "deno run -A app/main.ts"
+    "check": "deno fmt --check . && deno lint . && deno check",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "deno serve -A _fresh/server.js",
+    "preview": "deno serve -A _fresh/server.js"
   },
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "lib": [
+      "dom",
+      "dom.asynciterable",
+      "dom.iterable",
+      "deno.ns"
+    ],
+    "jsx": "precompile",
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": [
+      "a",
+      "img",
+      "source",
+      "body",
+      "html",
+      "head",
+      "title",
+      "meta",
+      "script",
+      "link",
+      "style",
+      "base",
+      "noscript",
+      "template"
+    ],
+    "types": [
+      "vite/client"
+    ]
   },
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
-    "preact": "npm:preact@10.22.0",
-    "preact/debug": "npm:preact@10.22.0/debug",
-    "preact/devtools": "npm:preact@10.22.0/devtools",
-    "preact/hooks": "npm:preact@10.22.0/hooks",
-    "preact/jsx-runtime": "npm:preact@10.22.0/jsx-runtime",
-    "preact-render-to-string": "npm:preact-render-to-string@6.3.1",
-    "twind": "https://esm.sh/twind@1.1.3",
-    "twind/": "https://esm.sh/twind@1.1.3/",
+    "fresh": "jsr:@fresh/core@^2.3.3",
+    "preact": "npm:preact@^10.29.1",
+    "preact/debug": "npm:preact@^10.29.1/debug",
+    "preact/devtools": "npm:preact@^10.29.1/devtools",
+    "preact/hooks": "npm:preact@^10.29.1/hooks",
+    "preact/jsx-runtime": "npm:preact@^10.29.1/jsx-runtime",
+    "@preact/signals": "npm:@preact/signals@^2.9.0",
+    "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.1.2",
+    "vite": "npm:vite@^7.1.3",
+    "@types/babel__core": "npm:@types/babel__core@^7.20.5",
+    "tailwindcss": "npm:tailwindcss@^4.1.10",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12",
+    "@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.16",
     "react-icons/si": "https://cdn.jsdelivr.net/gh/urielch/react-icons-si@1.0.9/mod.ts",
-    "react-icons/tb": "https://cdn.jsdelivr.net/gh/urielch/react-icons-tb@1.0.9/mod.ts",
-    "@preact/signals": "npm:@preact/signals@1.2.2",
-    "@preact/signals-core": "npm:@preact/signals-core@1.5.1",
-    "@twind/core": "npm:@twind/core@1.1.3",
-    "@twind/preset-tailwind": "npm:@twind/preset-tailwind@1.1.4",
-    "@twind/preset-autoprefix": "https://esm.sh/@twind/preset-autoprefix@1.0.7/"
+    "react-icons/tb": "https://cdn.jsdelivr.net/gh/urielch/react-icons-tb@1.0.9/mod.ts"
   },
   "lint": {
     "rules": {
@@ -34,13 +61,18 @@
       ]
     }
   },
+  "exclude": [
+    "**/_fresh/*",
+    ".vscode",
+    "app/static"
+  ],
   "deploy": {
     "org": "loosedays",
     "app": "loosedays-site",
     "build": "deno task build",
     "runtime": {
       "type": "dynamic",
-      "entrypoint": "app/main.ts"
+      "entrypoint": "_fresh/server.js"
     }
   }
 }

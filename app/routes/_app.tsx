@@ -1,4 +1,4 @@
-import { PageProps } from "$fresh/server.ts";
+import { PageProps } from "fresh";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -7,10 +7,18 @@ export default function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
         <title>LOOSEDAYS Co.,Ltd.</title>
-        <style>{`
+        <style>
+          {`
           body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
           html { scroll-behavior: smooth; }
           @keyframes gradient-shift {
@@ -68,14 +76,11 @@ export default function App({ Component }: PageProps) {
             background-image: radial-gradient(circle, white 1.5px, transparent 1.5px);
             background-size: 32px 32px;
           }
-        `}</style>
+        `}
+        </style>
       </head>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: `
-          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-          }
-        `}} />
+        <script src="/dark-mode.js"></script>
         <Component />
       </body>
     </html>
