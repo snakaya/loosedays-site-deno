@@ -20,11 +20,16 @@ deno task build
 deno task preview
 ```
 
-Deploy to Deno Deploy:
+Deploy the production build to Deno Deploy:
 
 ```sh
-deno deploy --prod
+deno task deploy:prod
 ```
+
+The deployment task builds Fresh locally, packages the generated `_fresh` output
+with the compatibility entrypoint expected by the existing Deno Deploy app,
+deploys it to production, and verifies the public site and logo asset. Use
+`deno task deploy:prod --dry-run` to validate packaging without publishing.
 
 ## License
 
