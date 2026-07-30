@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "deno serve -A _fresh/server.js",
-    "preview": "deno serve -A _fresh/server.js"
+    "preview": "deno task build && deno task start"
   },
   "compilerOptions": {
     "lib": [
