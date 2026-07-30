@@ -40,6 +40,35 @@ export function Product() {
 
         {/* Secondary products */}
         <div class="mt-10 grid md:grid-cols-2 gap-6">
+            {/* Vibsync */}
+            <div class="bg-gradient-to-br from-[#29216f] to-[#4f46e5] rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-6 md:p-8 text-center">
+                    <h3 class="text-3xl md:text-4xl font-black text-white">
+                        Vibsync
+                    </h3>
+                    <p class="mt-3 text-lg font-medium text-white">
+                        One Shared Brain for Your Team&#39;s AI Coding Agents
+                    </p>
+                    <p class="mt-2 text-indigo-100 font-light">
+                        Shared memory, async Q&amp;A, and file-claim coordination over MCP —
+                        vendor-neutral, free during beta.
+                    </p>
+
+                    <div class="mt-4 flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">MCP</span>
+                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Claude Code</span>
+                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Cursor</span>
+                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Codex</span>
+                    </div>
+
+                    <p class="mt-5">
+                        <a href="https://vibsync.com/" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-white text-[#342d8b] font-bold rounded-lg hover:bg-indigo-50 transition duration-200">
+                            vibsync.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
             {/* GACHI.ai */}
             <div class="bg-gradient-to-br from-[#ff6b6b] to-[#7c5ce0] rounded-2xl shadow-lg overflow-hidden">
                 <div class="p-6 md:p-8 text-center">
