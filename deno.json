@@ -35,11 +35,8 @@
     "**/_fresh/*"
   ],
   "deploy": {
-    "project": "a4a1d4b7-ddf5-489a-b194-82c488e53f62",
-    "exclude": [
-      "**/node_modules"
-    ],
-    "include": [],
+    "org": "loosedays",
+    "app": "loosedays-site",
     "entrypoint": "app/main.ts"
   }
 }
