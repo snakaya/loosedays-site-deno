@@ -1,5 +1,3 @@
-import AddToSlack from "../islands/AddToSlack.tsx";
-
 export function Product() {
   return (
     <div id="sec_product" class="pt-16 pb-16 mx-auto container px-4">
@@ -38,83 +36,63 @@ export function Product() {
             </div>
         </div>
 
-        {/* Secondary products */}
-        <div class="mt-10 grid md:grid-cols-2 gap-6">
+        {/* Secondary products — full-width, vertically compact banners */}
+        <div class="mt-6 space-y-6">
             {/* Vibsync */}
             <div class="bg-gradient-to-br from-[#29216f] to-[#4f46e5] rounded-2xl shadow-lg overflow-hidden">
-                <div class="p-6 md:p-8 text-center">
-                    <h3 class="text-3xl md:text-4xl font-black text-white">
-                        Vibsync
-                    </h3>
-                    <p class="mt-3 text-lg font-medium text-white">
-                        One Shared Brain for Your Team&#39;s AI Coding Agents
-                    </p>
-                    <p class="mt-2 text-indigo-100 font-light">
-                        Shared memory, async Q&amp;A, and file-claim coordination over MCP —
-                        vendor-neutral, free during beta.
-                    </p>
-
-                    <div class="mt-4 flex flex-wrap justify-center gap-2">
-                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">MCP</span>
-                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Claude Code</span>
-                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Cursor</span>
-                        <span class="px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full">Codex</span>
+                <div class="p-6 md:px-10 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
+                    <div class="md:flex-1 md:pr-6">
+                        <h3 class="text-2xl md:text-3xl font-black text-white">
+                            Vibsync
+                        </h3>
+                        <p class="mt-1 text-base md:text-lg font-medium text-white">
+                            One Shared Brain for Your Team&#39;s AI Coding Agents
+                        </p>
+                        <p class="mt-1 text-sm text-indigo-100 font-light">
+                            Shared memory, async Q&amp;A, and file-claim coordination over MCP — vendor-neutral, free during beta.
+                        </p>
                     </div>
-
-                    <p class="mt-5">
-                        <a href="https://vibsync.com/" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-white text-[#342d8b] font-bold rounded-lg hover:bg-indigo-50 transition duration-200">
+                    <div class="flex flex-col items-center md:items-end gap-3 md:flex-shrink-0">
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="px-3 py-1 bg-indigo-900 text-indigo-100 text-xs font-medium rounded-full">MCP</span>
+                            <span class="px-3 py-1 bg-indigo-900 text-indigo-100 text-xs font-medium rounded-full">Claude Code</span>
+                            <span class="px-3 py-1 bg-indigo-900 text-indigo-100 text-xs font-medium rounded-full">Cursor</span>
+                            <span class="px-3 py-1 bg-indigo-900 text-indigo-100 text-xs font-medium rounded-full">Codex</span>
+                        </div>
+                        <a href="https://vibsync.com/" target="_blank" rel="noopener" class="inline-block px-6 py-2 bg-white text-[#342d8b] font-bold rounded-lg hover:bg-indigo-50 transition duration-200 whitespace-nowrap">
                             vibsync.com
                         </a>
-                    </p>
-                </div>
-            </div>
-
-            {/* GACHI.ai */}
-            <div class="bg-gradient-to-br from-[#ff6b6b] to-[#7c5ce0] rounded-2xl shadow-lg overflow-hidden">
-                <div class="p-6 md:p-8 text-center">
-                    <h3 class="text-3xl md:text-4xl font-black text-white">
-                        GACHI.ai
-                    </h3>
-                    <p class="mt-3 text-lg font-medium text-white">
-                        Your Most Reliable AI Partner on Slack
-                    </p>
-                    <p class="mt-2 text-white font-light">Start from Free Plan!</p>
-
-                    <div class="mt-6">
-                        <AddToSlack installUrl="https://gachi.ai/install" />
                     </div>
-
-                    <p class="mt-4">
-                        <a href="https://gachi.ai/" target="_blank" class="text-white underline hover:opacity-80 transition duration-200">gachi.ai</a>
-                    </p>
                 </div>
             </div>
 
             {/* GenAI OIDC IdP */}
             <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-2xl shadow-lg overflow-hidden">
-                <div class="p-6 md:p-8 text-center">
-                    <div class="flex items-center justify-center gap-3 mb-4">
-                        <span class="text-4xl">🤖</span>
-                        <img src="/images/openid_logo_dark.svg" alt="OpenID" class="h-10" />
+                <div class="p-6 md:px-10 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
+                    <div class="md:flex-1 md:pr-6">
+                        <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+                            <span class="text-3xl">🤖</span>
+                            <img src="/images/openid_logo_dark.svg" alt="OpenID" class="h-8" />
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-black text-white">
+                            GenAI OIDC IdP
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-300 font-light">
+                            LLM-Powered OIDC Identity Provider — a proof-of-concept that delegates authentication to OpenAI.
+                        </p>
                     </div>
-                    <h3 class="text-2xl md:text-3xl font-black text-white">
-                        GenAI OIDC IdP
-                    </h3>
-                    <p class="mt-3 text-gray-300 font-light">
-                        LLM-Powered OIDC Identity Provider — a proof-of-concept that delegates authentication to OpenAI.
-                    </p>
-
-                    <div class="mt-4 flex flex-wrap justify-center gap-2">
-                        <span class="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">OpenAI</span>
-                        <span class="px-3 py-1 bg-green-600 text-white text-xs font-medium rounded-full">Deno</span>
-                        <span class="px-3 py-1 bg-orange-600 text-white text-xs font-medium rounded-full">OIDC</span>
-                        <span class="px-3 py-1 bg-purple-600 text-white text-xs font-medium rounded-full">PKCE</span>
+                    <div class="flex flex-col items-center md:items-end gap-3 md:flex-shrink-0">
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">OpenAI</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-xs font-medium rounded-full">Deno</span>
+                            <span class="px-3 py-1 bg-orange-600 text-white text-xs font-medium rounded-full">OIDC</span>
+                            <span class="px-3 py-1 bg-purple-600 text-white text-xs font-medium rounded-full">PKCE</span>
+                        </div>
+                        <p class="flex gap-4 text-sm">
+                            <a href="https://github.com/snakaya/GenAI-OIDC-IdP" target="_blank" class="text-blue-400 underline hover:opacity-80 transition duration-200">GitHub</a>
+                            <a href="https://genai-oidc.deno.dev" target="_blank" class="text-blue-400 underline hover:opacity-80 transition duration-200">Live Demo</a>
+                        </p>
                     </div>
-
-                    <p class="mt-5 flex justify-center gap-4 text-sm">
-                        <a href="https://github.com/snakaya/GenAI-OIDC-IdP" target="_blank" class="text-blue-400 underline hover:opacity-80 transition duration-200">GitHub</a>
-                        <a href="https://genai-oidc.deno.dev" target="_blank" class="text-blue-400 underline hover:opacity-80 transition duration-200">Live Demo</a>
-                    </p>
                 </div>
             </div>
         </div>
