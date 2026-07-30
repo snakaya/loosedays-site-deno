@@ -172,7 +172,7 @@ export function Product() {
                   GitHub
                 </a>
                 <a
-                  href="https://genai-oidc.deno.dev"
+                  href="https://genai-oidc-idp.loosedays.deno.net"
                   target="_blank"
                   class="text-blue-400 underline hover:opacity-80 transition duration-200"
                 >
