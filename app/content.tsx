@@ -529,7 +529,7 @@ export const companyRows = [
 ];
 
 export const contactCommand =
-  'curl -H "X-REQUEST-CONTACT:1" https://www.loosedays.jp/';
+  'curl -H "X-REQUEST-CONTACT:1" https://loosedays.jp/';
 
 export const social = [
   { label: "GitHub", href: "https://github.com/snakaya/" },
