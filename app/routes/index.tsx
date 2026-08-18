@@ -122,11 +122,12 @@ export default define.page<typeof handler>(function Home() {
           name="twitter:image"
           content="https://loosedays.jp/images/loosedays_square_card_light.png"
         />
+        <link rel="canonical" href="https://loosedays.jp/" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
 
       <div class="min-h-screen bg-[#05070f] text-slate-200 antialiased selection:bg-sky-400/30">
-        <NavBar variant="a" />
+        <NavBar />
 
         {/* ---------------------------------------------------- hero --- */}
         <section
@@ -454,7 +455,7 @@ export default define.page<typeof handler>(function Home() {
             lead="Our contact details are served as JSON-LD. Run it."
           />
           <Reveal>
-            <CopyCommand variant="a" />
+            <CopyCommand />
           </Reveal>
         </section>
 
