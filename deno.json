@@ -66,7 +66,8 @@
   "exclude": [
     "**/_fresh/*",
     ".vscode",
-    "app/static"
+    "app/static",
+    "deno.jsonc"
   ],
   "deploy": {
     "org": "loosedays",
