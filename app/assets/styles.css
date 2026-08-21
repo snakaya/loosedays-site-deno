@@ -1,3 +1,28 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* BOUNCE CIRCUIT card: a ball tracing the bounce line behind the copy. */
+@keyframes bounce-run {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.bounce-ball {
+  offset-path: path(
+    "M 8 196 Q 52 44 96 196 Q 134 78 172 196 Q 204 106 236 196 Q 262 130 288 196 Q 310 152 332 196 Q 350 170 368 196"
+  );
+  offset-rotate: 0deg;
+  animation: bounce-run 9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bounce-ball {
+    animation: none;
+    offset-distance: 12%;
+  }
+}

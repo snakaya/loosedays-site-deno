@@ -77,19 +77,25 @@ export interface Product {
   links: { label: string; href: string }[];
   /** Image wordmark, when the product has one. */
   logo?: string;
+  /** Height class for that wordmark, when the default reads too small. */
+  logoClass?: string;
   /** Drawn symbol, for products whose name is set as type. */
   mark?: (props: { class?: string }) => JSX.Element;
-  /** Silent demo loop shown beside the copy. */
+  /** Demo loop shown beside the copy. */
   media?: {
     src: string;
     poster: string;
     label: string;
     /** "screen" is a desktop capture, "phone" a handset recording. */
     shape: "screen" | "phone";
+    /** Offer a sound toggle — for clips that carry a soundtrack. */
+    sound?: boolean;
   };
   accent: string;
   /** "product" ships to customers; "lab" is an experiment we publish. */
   tier: "product" | "lab";
+  /** Optional decorative treatment keyed to the product. */
+  backdrop?: "bounce";
   /** Short qualifier shown on lab entries. */
   note?: string;
 }
@@ -173,6 +179,34 @@ export const products: Product[] = [
     },
     accent: "#facc15",
     tier: "product",
+  },
+  {
+    id: "bounce-circuit",
+    name: "BOUNCE CIRCUIT",
+    headline: "You Cannot Stop the Bounce",
+    desc:
+      "A free browser physics score attack. There is no jump button and no steering in the air — your grounded position and takeoff angle shape the next trajectory. 3 Cups, 9 Courses, no install.",
+    tags: ["Open Beta", "Free", "Phone & PC", "WebGL2", "Deno"],
+    links: [
+      {
+        label: "bounce-circuit.racing",
+        href: "https://bounce-circuit.racing/",
+      },
+      { label: "Open Beta", href: "https://beta.bounce-circuit.racing/" },
+    ],
+    logo: "/images/bounce-circuit_logo.png",
+    logoClass: "h-16",
+    media: {
+      src: "/media/bounce-circuit-cm.mp4",
+      poster: "/media/bounce-circuit-cm.jpg",
+      label:
+        "The BOUNCE CIRCUIT commercial, cutting between courses on every landing",
+      shape: "screen",
+      sound: true,
+    },
+    accent: "#42e5d0",
+    tier: "product",
+    backdrop: "bounce",
   },
   {
     id: "genai-oidc",

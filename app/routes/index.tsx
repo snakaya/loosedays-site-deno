@@ -64,6 +64,84 @@ export const handler = define.handlers({
   },
 });
 
+/**
+ * The bounce line from BOUNCE CIRCUIT, drawn into the card: the ball keeps its
+ * own trajectory and the dotted rings mark where it lands next.
+ *
+ * The panel is a fixed 376x220 so the CSS motion path and the drawn path share
+ * one coordinate space; it is anchored to the bottom-right and clipped.
+ */
+function BounceBackdrop() {
+  return (
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl"
+    >
+      <div class="absolute bottom-5 right-4 hidden h-[220px] w-[376px] opacity-70 md:block lg:right-10">
+        <svg viewBox="0 0 376 220" class="absolute inset-0 h-full w-full">
+          <defs>
+            <linearGradient id="bc-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#42e5d0" stop-opacity="0.06" />
+              <stop offset="0.55" stop-color="#42e5d0" stop-opacity="0.55" />
+              <stop offset="1" stop-color="#ff5cd6" stop-opacity="0.4" />
+            </linearGradient>
+          </defs>
+
+          {/* Course floor and the rail that keeps the ball in play */}
+          <line
+            x1="0"
+            y1="196"
+            x2="376"
+            y2="196"
+            stroke="#42e5d0"
+            stroke-opacity="0.3"
+            stroke-width="1"
+          />
+          <line
+            x1="0"
+            y1="207"
+            x2="376"
+            y2="207"
+            stroke="#42e5d0"
+            stroke-opacity="0.12"
+            stroke-width="1"
+          />
+
+          {/* The bounce line itself */}
+          <path
+            d="M 8 196 Q 52 44 96 196 Q 134 78 172 196 Q 204 106 236 196 Q 262 130 288 196 Q 310 152 332 196 Q 350 170 368 196"
+            fill="none"
+            stroke="url(#bc-line)"
+            stroke-width="1.5"
+            stroke-dasharray="3 5"
+            stroke-linecap="round"
+          />
+
+          {/* Landing rings — the game's own next-contact marker */}
+          {[96, 172, 236, 288, 332].map((x, i) => (
+            <ellipse
+              cx={x}
+              cy={196}
+              rx={11 - i * 1.4}
+              ry={3.4 - i * 0.42}
+              fill="none"
+              stroke="#42e5d0"
+              stroke-opacity={0.42 - i * 0.06}
+              stroke-width="1"
+            />
+          ))}
+        </svg>
+
+        {/* The ball, riding the same path in the same coordinates */}
+        <div
+          class="bounce-ball absolute -ml-1 -mt-1 h-2 w-2 rounded-full"
+          style="background: linear-gradient(135deg, #f8ff72, #b8e93d); box-shadow: 0 0 10px rgba(184,233,61,0.85);"
+        />
+      </div>
+    </div>
+  );
+}
+
 /** Section heading used across the page. */
 function SectionHead(
   { eyebrow, title, lead }: { eyebrow: string; title: string; lead: string },
@@ -223,8 +301,13 @@ export default define.page<typeof handler>(function Home() {
                     class="absolute inset-y-6 left-0 w-1 rounded-r-full"
                     style={`background:${p.accent}`}
                   />
+                  {p.backdrop === "bounce" && <BounceBackdrop />}
 
-                  <div class="relative flex flex-col gap-8 px-8 py-9 md:flex-row md:items-center md:gap-10 md:px-12 md:py-11">
+                  <div
+                    class={`relative flex flex-col gap-8 px-8 py-9 md:flex-row md:items-center md:gap-10 md:px-12 md:py-11 ${
+                      p.backdrop ? "md:pb-24" : ""
+                    }`}
+                  >
                     <div class="md:flex-1">
                       <div class="flex items-center gap-4">
                         {p.mark && (
@@ -235,7 +318,7 @@ export default define.page<typeof handler>(function Home() {
                             <img
                               src={p.logo}
                               alt={p.name}
-                              class="h-10 w-auto"
+                              class={`w-auto ${p.logoClass ?? "h-10"}`}
                             />
                           )
                           : (
@@ -247,7 +330,11 @@ export default define.page<typeof handler>(function Home() {
                       <p class="mt-6 text-xl font-medium leading-snug text-white md:text-2xl">
                         {p.headline}
                       </p>
-                      <p class="mt-3 max-w-2xl leading-relaxed text-slate-400">
+                      <p
+                        class={`mt-3 leading-relaxed text-slate-400 ${
+                          p.backdrop ? "max-w-xl" : "max-w-2xl"
+                        }`}
+                      >
                         {p.desc}
                       </p>
                       <div class="mt-6 flex flex-wrap gap-1.5">
@@ -292,6 +379,7 @@ export default define.page<typeof handler>(function Home() {
                             src={p.media.src}
                             poster={p.media.poster}
                             label={p.media.label}
+                            sound={p.media.sound}
                             class={`block h-auto w-full ${
                               p.media.shape === "phone"
                                 ? "rounded-[1.35rem]"
